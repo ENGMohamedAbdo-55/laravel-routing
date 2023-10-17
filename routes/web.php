@@ -1,5 +1,7 @@
 <?php
 
+use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get("Users",function(){
-return view('Users');
+Route::post("Users",function(Request $request){
+
+return $request;
 
 });
